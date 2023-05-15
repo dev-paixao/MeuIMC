@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <title>Tempo Certo</title>
+    <title>Meu IMC</title>
 </head>
 <body>
     <main id="container">
@@ -16,40 +16,56 @@
 
             <form id="form">
                     <h1 id="title">
-                    Tempo Certo
+                    Meu IMC
                     </h1>
                     <div class="input-box">
-                        <label for="city">Cidade:</label>
+                        <label for="peso">Peso (kg):</label>
                         <div class="input-field">
-                            <i class="fas fa-city"></i>
-                            <input type="text" id="city" name="city" required aria-label="City" autocomplete="off">
+                            <i class="fa-solid fa-weight-scale"></i>
+                            <input type="number" id="peso" required>
                         </div>
                     </div>
 
                     <div class="input-box">
-                        <label for="country">Estado:</label>
+                        <label for="altura">Altura (cm):</label>
                         <div class="input-field">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <input type="text" id="country" name="country" required aria-label="Country" autocomplete="off">
+                           <i class="fas fa-ruler"></i>
+                           <input type="number" id="altura" required>
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="idade">Idade:</label>
+                        <div class="input-field">
+                            <i class="fas fa-sort-numeric-up"></i>
+                            <input type="number" id="idade" required>
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="sexo">Sexo:</label>
+                        <div class="input-field">
+                            <i class="fas fa-child"></i>
+                            <select id="sexo">
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                            </select>
                         </div>
                     </div>
                                         
-                <button id="submit-button" type="submit" aria-label="Get Weather">
-                    Buscar Clima
+                <button id="submit-button" type="submit">
+                    Calcular
                 </button>
                 
             </form>
-                               
+                              
             <div class="info-result">
-                <div id="result">
-                    <div id="weather-data"></div>
-                    <div id="weather-description"></div>
-                    <div id="feedback"></div>
-                </div>
+
+                <div id="resultado"></div>
 
                 <div id="more_info">
-                    <a href="https://openweathermap.org/api" target="_blank">
-                        Mais informações sobre a Weather API
+                    <a href="http://tabnet.datasus.gov.br/cgi/SISVAN/CNV/notas_sisvan.html" target="_blank">
+                        Mais informações SISVAN - Notas Técnicas
                         <i class="fas fa-link"></i>
                     </a>
                 </div>

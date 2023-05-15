@@ -69,6 +69,15 @@ body {
     padding: 0.6rem 1rem;
 }
 
+.input-field select{
+    color: #c79709 ;
+    background-color: #3f3f46;
+    border: none;
+    font-size: 1.3rem;
+    padding: 0.6rem 1rem;
+    width: 100%;
+}
+
 .input-field input {
     background-color: transparent;
     border: none;
@@ -83,7 +92,8 @@ body {
   appearance: none;
 }
 
-.input-field input:focus {
+.input-field input:focus,
+.input-field select:focus {
     outline: none;
 }
 

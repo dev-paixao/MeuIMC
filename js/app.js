@@ -11,11 +11,11 @@ document.getElementById('form').addEventListener('submit', function(event) {
     var pesoIdeal;
   
     if (sexo === 'masculino') {
-      imcIdeal = 24.9;
-      pesoIdeal = (imcIdeal * (altura * altura)).toFixed(1);
+        imcIdeal = 24.9;
+        pesoIdeal = (imcIdeal * (altura * altura)).toFixed(1);
     } else {
-      imcIdeal = 24.9;
-      pesoIdeal = (imcIdeal * (altura * altura)).toFixed(1);
+        imcIdeal = 24.9;
+        pesoIdeal = (imcIdeal * (altura * altura)).toFixed(1);
     }
   
     var pesoAPerder = (peso - pesoIdeal).toFixed(1);
@@ -23,8 +23,25 @@ document.getElementById('form').addEventListener('submit', function(event) {
   
     var resultado = document.getElementById('resultado');
     resultado.innerHTML = 'Seu IMC: ' + imc.toFixed(1) + '<br>' +
-                          'Peso Ideal: ' + pesoIdeal + ' kg' + '<br>' +
-                          'Peso a Perder: ' + pesoAPerder + ' kg' + '<br>' +
-                          'Peso a Ganhar: ' + pesoAGanhar + ' kg';
-  });
-  
+        'Peso Ideal: ' + pesoIdeal + ' kg';
+
+    if (imc < 18.5) {
+        resultado.innerHTML += '<br>' + 'Classificação: Abaixo do peso';
+    } else if (imc >= 18.5 && imc < 25) {
+        resultado.innerHTML += '<br>' + 'Classificação: Peso normal';
+    } else if (imc >= 25 && imc < 30) {
+        resultado.innerHTML += '<br>' + 'Classificação: Sobrepeso';
+    } else if (imc >= 30 && imc < 35) {
+        resultado.innerHTML += '<br>' + 'Classificação: Obesidade grau I';
+    } else if (imc >= 35 && imc < 40) {
+        resultado.innerHTML += '<br>' + 'Classificação: Obesidade grau II (severa)';
+    } else {
+        resultado.innerHTML += '<br>' + 'Classificação: Obesidade grau III (mórbida)';
+    }
+
+    if (peso > pesoIdeal) {
+        resultado.innerHTML += '<br>' + 'Peso a Perder: ' + pesoAPerder + ' kg';
+    } else if (peso < pesoIdeal) {
+        resultado.innerHTML += '<br>' + 'Peso a Ganhar: ' + pesoAGanhar + ' kg';
+    }
+});

@@ -28,19 +28,19 @@ document.getElementById('form').addEventListener('submit', function(event) {
   resultado.innerHTML = 'Seu IMC: ' + imc.toFixed(1) + '<br>';
 
   if (imc < 18.5) {
-      resultado.innerHTML += 'Classificação: Abaixo do peso<br>';
+    resultado.innerHTML += 'Classificação: <span class="classificacao atencao">Abaixo do peso</span><br>';
   } else if (imc >= 18.5 && imc < 25) {
-      resultado.innerHTML += 'Classificação: Peso normal<br>';
+    resultado.innerHTML += 'Classificação: <span class="classificacao saudavel">Peso normal</span><br>';
   } else if (imc >= 25 && imc < 30) {
-      resultado.innerHTML += 'Classificação: Sobrepeso<br>';
+    resultado.innerHTML += 'Classificação: <span class="classificacao risco"> Sobrepeso</span><br>';
   } else if (imc >= 30 && imc < 35) {
-      resultado.innerHTML += 'Classificação: Obesidade grau I<br>';
+    resultado.innerHTML += 'Classificação: <span class="classificacao risco">Obesidade grau I</span><br>';
   } else if (imc >= 35 && imc < 40) {
-      resultado.innerHTML += 'Classificação: Obesidade grau II (severa)<br>';
+    resultado.innerHTML += 'Classificação: <span class="classificacao risco">Obesidade grau II (severa)</span><br>';
   } else {
-      resultado.innerHTML += 'Classificação: Obesidade grau III (mórbida)<br>';
+    resultado.innerHTML += 'Classificação: <span class="classificacao risco">Obesidade grau III (mórbida)</span><br>';
   }
-  
+    
   resultado.innerHTML += 'Peso Ideal fica entre: ' + pesoIdeal + '<br>';
 
   if (peso > pesoIdealMax) {

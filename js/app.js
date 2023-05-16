@@ -41,11 +41,11 @@ document.getElementById('form').addEventListener('submit', function(event) {
     resultado.innerHTML += 'Classificação: <span class="classificacao risco">Obesidade grau III (mórbida)</span><br>';
   }
     
-  resultado.innerHTML += 'Peso Ideal fica entre: ' + pesoIdeal + '<br>';
+  resultado.innerHTML += 'Peso Ideal: ' + pesoIdeal + '<br>';
 
   if (peso > pesoIdealMax) {
-    resultado.innerHTML += 'Peso a Perder: Entre ' + pesoMinAPerder + ' kg e ' + pesoMaxAPerder + ' kg';
+    resultado.innerHTML += 'Peso a Perder: ' + pesoMinAPerder + ' kg e ' + pesoMaxAPerder + ' kg';
   } else if (peso < pesoIdealMin) {
-    resultado.innerHTML += 'Peso a Ganhar: Entre ' + pesoMinAGanhar + ' kg e ' + pesoMaxAGanhar + ' kg';
+    resultado.innerHTML += 'Peso a Ganhar: ' + pesoMinAGanhar + ' kg e ' + pesoMaxAGanhar + ' kg';
   }
 });

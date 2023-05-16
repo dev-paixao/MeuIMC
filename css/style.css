@@ -78,6 +78,10 @@ body {
     width: 100%;
 }
 
+#icone-feminino {
+    display: none;
+}
+
 .input-field input {
     background-color: transparent;
     border: none;

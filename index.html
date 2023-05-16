@@ -45,9 +45,10 @@
                     <div class="input-box">
                         <label for="sexo">Sexo:</label>
                         <div class="input-field">
-                            <i class="fas fa-child"></i>
-                            <select id="sexo">
-                                <option value="masculino">Masculino</option>
+                            <i id="icone-masculino" class="fas fa-child"></i>
+                            <i id="icone-feminino" class="fa-solid fa-child-dress"></i>
+                            <select id="sexo" onchange="trocarIcone()">
+                                <option value="masculino" selected>Masculino</option>
                                 <option value="feminino">Feminino</option>
                             </select>
                         </div>
@@ -73,5 +74,6 @@
         </section>
     </main>
     <script src="js/app.js"></script>   
+    <script src="js/trocarIcone.js"></script>
 </body>
 </html>

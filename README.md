@@ -6,7 +6,7 @@ O aplicativo MeuIMC é uma ferramenta simples e eficaz para calcular o IMC e for
 
 ## Como usar
 
-1. Acesse a aplicação MeuIMC [aqui](https://exemplo.com/meuimc).
+1. Acesse a aplicação MeuIMC [aqui](https://dev-paixao.github.io/MeuIMC/).
 
 2. Preencha os campos obrigatórios, como peso, altura, sexo e idade.
 

@@ -44,8 +44,8 @@ document.getElementById('form').addEventListener('submit', function(event) {
   resultado.innerHTML += 'Peso Ideal: ' + pesoIdeal + '<br>';
 
   if (peso > pesoIdealMax) {
-    resultado.innerHTML += 'Peso a Perder: ' + pesoMinAPerder + ' kg e ' + pesoMaxAPerder + ' kg';
+    resultado.innerHTML += 'Peso a Perder: ' + pesoMinAPerder + ' kg a ' + pesoMaxAPerder + ' kg';
   } else if (peso < pesoIdealMin) {
-    resultado.innerHTML += 'Peso a Ganhar: ' + pesoMinAGanhar + ' kg e ' + pesoMaxAGanhar + ' kg';
+    resultado.innerHTML += 'Peso a Ganhar: ' + pesoMinAGanhar + ' kg a ' + pesoMaxAGanhar + ' kg';
   }
 });
